@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'home_page.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -16,13 +19,13 @@ class IntroPage extends StatelessWidget {
           ),
 
           //we deliver groceries at your doorstep
-          const Padding(
+          Padding(
             padding: EdgeInsets.all(24.0),
             child: Text(
               "We deliver groceries at your doorstep",
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 40,
+              style: GoogleFonts.notoSerif(
+                fontSize: 36,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -31,18 +34,28 @@ class IntroPage extends StatelessWidget {
           //fresh items everyday
           const Text(
             "Fresh items everyday",
+            style: TextStyle(color: Color(0xFF9E9E9E)),
           ),
           const Spacer(),
 
           //get started button
-          Container(
-            decoration: BoxDecoration(
-                color: Colors.deepPurple,
-                borderRadius: BorderRadius.circular(12)),
-            padding: const EdgeInsets.all(24),
-            child: const Text(
-              "Get Started",
-              style: TextStyle(color: Colors.white),
+          GestureDetector(
+            onTap: () => Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: ((context) {
+              return const HomePage();
+            }))),
+            child: Container(
+              decoration: BoxDecoration(
+                  color: Colors.deepPurple,
+                  borderRadius: BorderRadius.circular(12)),
+              padding: const EdgeInsets.all(24),
+              child: const Text(
+                "Get Started",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ),
           const Spacer(),
