@@ -44,7 +44,8 @@ class IntroPage extends StatelessWidget {
               "Get Started",
               style: TextStyle(color: Colors.white),
             ),
-          )
+          ),
+          const Spacer(),
         ],
       ),
     );
