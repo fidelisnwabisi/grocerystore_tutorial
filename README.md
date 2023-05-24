@@ -19,3 +19,9 @@ samples, guidance on mobile development, and a full API reference.
 
 All thanks to
 [Mitch Koko](https://www.youtube.com/@createdbykoko), for the course [🥑📱 Grocery Shop App • Flutter Tutorial ♥](https://www.youtube.com/@createdbykoko)
+
+# Screenshot Progress
+
+## Intro Page
+
+![Intro Page](lib/images/progress/Screenshot_20230524-025253.jpg)
