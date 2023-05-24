@@ -22,7 +22,7 @@ class IntroPage extends StatelessWidget {
           Padding(
             padding: EdgeInsets.all(24.0),
             child: Text(
-              "We deliver groceries at your doorstep",
+              "We deliver Groceries at your doorstep",
               textAlign: TextAlign.center,
               style: GoogleFonts.notoSerif(
                 fontSize: 36,
@@ -34,7 +34,9 @@ class IntroPage extends StatelessWidget {
           //fresh items everyday
           const Text(
             "Fresh items everyday",
-            style: TextStyle(color: Color(0xFF9E9E9E)),
+            style: TextStyle(
+              color: Color(0xFF9E9E9E),
+            ),
           ),
           const Spacer(),
 
@@ -52,6 +54,7 @@ class IntroPage extends StatelessWidget {
               child: const Text(
                 "Get Started",
                 style: TextStyle(
+                  fontSize: 16,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
