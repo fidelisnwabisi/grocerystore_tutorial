@@ -1,4 +1,4 @@
-# grocerystore_tutorial
+# Grocery Store_tutorial
 
 A new Flutter project.
 
@@ -25,3 +25,9 @@ All thanks to
 ## Intro Page
 
 ![Intro Page](lib/images/progress/Screenshot_20230524-025253.jpg)
+
+![Alt text](lib/images/progress/Screenshot_20230524-145217.jpg)
+
+# Time Stamp
+
+## 12:17
