@@ -9,5 +9,17 @@ class CartModel extends ChangeNotifier {
     ["Chicken", "12.00", "lib/images/chicken.png", Colors.brown],
     ["Water", "1.00", "lib/images/water.png", Colors.blue],
   ];
+
+  //List of cart items
+  List _cartItems = [];
+
   get shopItems => _shopItems;
+
+  get cartItems => _cartItems;
+
+  // add item to cart
+
+  // remove item from cart
+
+  // calculate total price
 }
