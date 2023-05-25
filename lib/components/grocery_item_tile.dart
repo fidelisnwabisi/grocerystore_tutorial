@@ -12,7 +12,7 @@ class GroceryItemTile extends StatelessWidget {
     required this.itemName,
     required this.itemPrice,
     required this.itemPath,
-    this.color,
+    required this.color,
     required this.onPressed,
   });
 

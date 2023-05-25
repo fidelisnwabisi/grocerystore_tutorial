@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return CartPage();
+              return const CartPage();
             },
           ),
         ),
@@ -49,8 +49,8 @@ class HomePage extends StatelessWidget {
             ),
 
             const SizedBox(height: 24),
-            //divider
 
+            //divider
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24),
               child: Divider(thickness: 4),
@@ -80,7 +80,10 @@ class HomePage extends StatelessWidget {
                       itemPrice: value.shopItems[index][1],
                       itemPath: value.shopItems[index][2],
                       color: value.shopItems[index][3],
-                      onPressed: () {},
+                      onPressed: () {
+                        Provider.of<CartModel>(context, listen: false)
+                            .addItemToCart(index);
+                      },
                     );
                   },
                 );

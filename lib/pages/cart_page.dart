@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:grocerystore_tutorial/model/cart_model.dart';
+import 'package:provider/provider.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -6,11 +9,24 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "My Cart",
-        ),
-      ),
-    );
+        appBar: AppBar(title: const Text("My Cart")),
+        body: Consumer<CartModel>(
+          builder: (context, value, child) {
+            return Column(
+              children: [
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        title: Text(value.cartItems[index][0]),
+                      );
+                    },
+                  ),
+                )
+              ],
+            );
+          },
+        ));
   }
 }
