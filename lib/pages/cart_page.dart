@@ -14,10 +14,11 @@ class CartPage extends StatelessWidget {
           builder: (context, value, child) {
             return Column(
               children: [
+                // List of Cart Items
                 Expanded(
                   child: ListView.builder(
                     itemCount: value.cartItems.length,
-                    padding: EdgeInsets.all(12),
+                    padding: const EdgeInsets.all(12),
                     itemBuilder: (context, index) {
                       return Padding(
                         padding: const EdgeInsets.all(12.0),
@@ -31,9 +32,9 @@ class CartPage extends StatelessWidget {
                               height: 36,
                             ),
                             title: Text(value.cartItems[index][0]),
-                            subtitle: Text('\$ ' + value.cartItems[index][1]),
+                            subtitle: Text('\$' + value.cartItems[index][1]),
                             trailing: IconButton(
-                              icon: Icon(Icons.cancel),
+                              icon: const Icon(Icons.cancel),
                               onPressed: () =>
                                   Provider.of<CartModel>(context, listen: false)
                                       .removeItemFromCart(index),
@@ -42,6 +43,57 @@ class CartPage extends StatelessWidget {
                         ),
                       );
                     },
+                  ),
+                ),
+
+                // Total price + Pay Now
+                Padding(
+                  padding: const EdgeInsets.all(36.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.circular(8)),
+                    padding: const EdgeInsets.all(24),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        //Price
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Total Price",
+                              style: TextStyle(color: Colors.grey[300]),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              "\$" + value.calculateTotal(),
+                              style: TextStyle(
+                                  color: Colors.grey[300],
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+
+                        // Pay Now Button
+                        Container(
+                          child: const Row(
+                            children: [
+                              Text(
+                                'Pay Now',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              Icon(
+                                Icons.arrow_forward_ios,
+                                size: 16,
+                                color: Colors.white,
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 )
               ],
