@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class GroceryItemTile extends StatelessWidget {
   final String itemName;
   final String itemPrice;
-  final String itemPath;
+  final String imagePath;
   final color;
   void Function()? onPressed;
 
@@ -11,7 +11,7 @@ class GroceryItemTile extends StatelessWidget {
     super.key,
     required this.itemName,
     required this.itemPrice,
-    required this.itemPath,
+    required this.imagePath,
     required this.color,
     required this.onPressed,
   });
@@ -31,7 +31,7 @@ class GroceryItemTile extends StatelessWidget {
           children: [
             // image
             Image.asset(
-              itemPath,
+              imagePath,
               height: 64,
             ),
 

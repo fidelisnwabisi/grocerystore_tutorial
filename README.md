@@ -32,4 +32,3 @@ All thanks to
 
 ## 14:47
 
-### I'm currently having issues with displaying the selected products in the CartPage, I have done every thing in the tutorial but its not working, lemme go and see the source code and know where i messed up

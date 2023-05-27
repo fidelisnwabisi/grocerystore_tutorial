@@ -78,7 +78,7 @@ class HomePage extends StatelessWidget {
                     return GroceryItemTile(
                       itemName: value.shopItems[index][0],
                       itemPrice: value.shopItems[index][1],
-                      itemPath: value.shopItems[index][2],
+                      imagePath: value.shopItems[index][2],
                       color: value.shopItems[index][3],
                       onPressed: () {
                         Provider.of<CartModel>(context, listen: false)

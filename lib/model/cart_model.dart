@@ -19,7 +19,7 @@ class CartModel extends ChangeNotifier {
 
   // add item to cart
   void addItemToCart(int index) {
-    _cartItems.add(_shopItems);
+    _cartItems.add(_shopItems[index]);
     notifyListeners();
   }
 
