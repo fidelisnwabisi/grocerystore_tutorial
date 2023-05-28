@@ -26,9 +26,12 @@ All thanks to
 
 ![Intro Page](lib/images/progress/Screenshot_20230524-025253.jpg)
 
+## Home Page
+
 ![Alt text](lib/images/progress/Screenshot_20230524-210916.jpg)
 
-# Time Stamp
+## Cart Page
 
-## 20:11
+
+![Alt text](lib/images/progress/Screenshot_20230528-012646.jpg)
 
