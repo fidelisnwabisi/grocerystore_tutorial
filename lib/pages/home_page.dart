@@ -36,6 +36,7 @@ class HomePage extends StatelessWidget {
             ),
 
             const SizedBox(height: 4),
+
             //Lets order items for you
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),

@@ -9,11 +9,27 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("My Cart")),
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          iconTheme: const IconThemeData(color: Colors.black),
+        ),
         body: Consumer<CartModel>(
           builder: (context, value, child) {
             return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                  child: Text(
+                    "My Cart",
+                    style: GoogleFonts.notoSerif(
+                      fontSize: 36,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+
                 // List of Cart Items
                 Expanded(
                   child: ListView.builder(
@@ -82,7 +98,7 @@ class CartPage extends StatelessWidget {
                             border: Border.all(color: Colors.green.shade100),
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          padding: EdgeInsets.all(12),
+                          padding: const EdgeInsets.all(12),
                           child: const Row(
                             children: [
                               Text(
