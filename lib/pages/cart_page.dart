@@ -78,6 +78,11 @@ class CartPage extends StatelessWidget {
 
                         // Pay Now Button
                         Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.green.shade100),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          padding: EdgeInsets.all(12),
                           child: const Row(
                             children: [
                               Text(
